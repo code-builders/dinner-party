@@ -11,11 +11,11 @@
 
 #first version: arrays pre-populated
 party = {
-  people: ["Bookis", "Elise", "Isaac", "Daniel", "Rachel",],
-  food: ["cauliflower", "pickles", "Fig Newtons", "tortillas", "avocado"],
-  drink: ["cider", "cashew milk", "broth", "sparkling water", "tea"],
+  people: ["Bookis", "Elise", "Isaac", "Daniel", "Rachel",].shuffle,
+  food: ["cauliflower", "pickles", "Fig Newtons", "tortillas", "avocado"].shuffle,
+  drink: ["cider", "cashew milk", "broth", "sparkling water", "tea"].shuffle,
   seat: ["1","2","3","4","5"]
-  #next: covert strings to an array, not listing 1 - 5 discretely
+  #NEXT: covert seat strings to an array, not listing 1 - 5 discretely
 }
 
 #put guests into array then randomly call on slots in array:
@@ -24,20 +24,20 @@ party = {
 
 guests = [
 #guest1
-["\nSeat #{party[:seat][0]}: \t#{party[:people].pop}\n
-\t\tFood: #{party[:food].sample} ; Beverage: #{party[:drink].sample}"],
+["\nSeat #{party[:seat][0]}: \t#{party[:people].pop}
+\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"],
 #guest2
-["\nSeat #{party[:seat][1]}: \t#{party[:people].pop}\n
-\t\tFood: #{party[:food].sample} ; Beverage: #{party[:drink].sample}"],
+["\nSeat #{party[:seat][1]}: \t#{party[:people].pop}
+\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"],
 #guest3
-["\nSeat #{party[:seat][2]}: \t#{party[:people].pop}\n
-\t\tFood: #{party[:food].sample} ; Beverage: #{party[:drink].sample}"],
+["\nSeat #{party[:seat][2]}: \t#{party[:people].pop}
+\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"],
 #guest4
-["\nSeat #{party[:seat][3]}: \t#{party[:people].pop}\n
-\t\tFood: #{party[:food].sample} ; Beverage: #{party[:drink].sample}"],
+["\nSeat #{party[:seat][3]}: \t#{party[:people].pop}
+\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"],
 #guest3
-["\nSeat #{party[:seat][4]}: \t#{party[:people].pop}\n
-\t\tFood: #{party[:food].sample} ; Beverage: #{party[:drink].sample}"]
+["\nSeat #{party[:seat][4]}: \t#{party[:people].pop}
+\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"]
 ]
 
 #program starts running here
