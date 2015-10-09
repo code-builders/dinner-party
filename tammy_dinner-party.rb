@@ -1,8 +1,17 @@
-drinks = ["tea", "coffee", "lemonade", "water"]
+puts "What kind of drink would you like?"
 
-desserts = ["cookies", "cake", "ice cream", "candy"]
+answer = gets.chomp
+drinks = [answer]
 
-people = ["Lily", "Bob", "Mark", "Frank"]
+puts "What kind of dessert would you like?"
+
+answer = gets.chomp
+desserts = [answer]
+
+puts "What is your name?"
+
+answer = gets.chomp
+people = [answer]
 
 seat_number = [1, 3, 5, 7]
 
