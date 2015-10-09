@@ -6,7 +6,7 @@
 
 ## Optional Enhancements
 
-# If you didn't already, only use one Hash variable which holds beverages, food, and    people keys.
+# If you didn't already, only use one Hash variable which holds beverages, food, and people keys.
 # Allow the application to ask for user input to populate the three arrays. The user should be allowed to put in as many items as they want into each array. The program will need some way to determine when a user is finished adding values for a particular array.
 
 #first version: arrays pre-populated
@@ -14,35 +14,20 @@ party = {
   people: ["Bookis", "Elise", "Isaac", "Daniel", "Rachel",].shuffle,
   food: ["cauliflower", "pickles", "Fig Newtons", "tortillas", "avocado"].shuffle,
   drink: ["cider", "cashew milk", "broth", "sparkling water", "tea"].shuffle,
-  seat: ["1","2","3","4","5"]
-  #NEXT: covert seat strings to an array, not listing 1 - 5 discretely
-}
+  seat: ["5","4","3","2","1"]
+  }
 
-#put guests into array then randomly call on slots in array:
-## Seats should not be random! Just list 1..5
-## NEXT: pop or otherwise remove each value as it's called - no repeats.
+## Listing seats in backward order feels funny.
+### Bookis: try .each_with_index - could eliminate need for seat key altogether.
 
-guests = [
-#guest1
-["\nSeat #{party[:seat][0]}: \t#{party[:people].pop}
-\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"],
-#guest2
-["\nSeat #{party[:seat][1]}: \t#{party[:people].pop}
-\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"],
-#guest3
-["\nSeat #{party[:seat][2]}: \t#{party[:people].pop}
-\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"],
-#guest4
-["\nSeat #{party[:seat][3]}: \t#{party[:people].pop}
-\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"],
-#guest3
-["\nSeat #{party[:seat][4]}: \t#{party[:people].pop}
-\t\tFood: #{party[:food].pop} ; Beverage: #{party[:drink].pop}"]
-]
-
-#program starts running here
+##program starts running here
 puts "Thanks for RSVP'ing for next week's dinner party!"
 
 puts "It's a potluck, so here is our final guest list, with a food and beverage for each person to bring:"
 
-puts guests
+5.times do
+  puts """
+  Seat ##{party[:seat].pop}:\t#{party[:people].pop}
+  \t\tFood:#{party[:food].pop}; Beverage: #{party[:drink].pop}
+  """
+end
