@@ -1,3 +1,8 @@
+puts "What is your name?"
+
+answer = gets.chomp
+people = [answer]
+
 puts "What kind of drink would you like?"
 
 answer = gets.chomp
@@ -7,11 +12,6 @@ puts "What kind of dessert would you like?"
 
 answer = gets.chomp
 desserts = [answer]
-
-puts "What is your name?"
-
-answer = gets.chomp
-people = [answer]
 
 seat_number = [1, 3, 5, 7]
 
