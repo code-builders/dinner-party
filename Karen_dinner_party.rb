@@ -6,5 +6,5 @@ party_elements = {beverages: ["coke", "diet coke", "sprite", "tequila", "tequiza
 #puts "#{party_elements[:people].sample} will have the #{party_elements[:food].sample} to eat with #{party_elements[:food].sample} on the side. And to drink, #{party_elements[:beverages].sample}! Yum!"
 
 party_elements[:people].each do |person|
-  puts "#{person} will have the #{party_elements[:food].sample} to eat with #{party_elements[:food].sample} on the side. And to drink, #{party_elements[:beverages].sample}! Yum! Seat number #{party_elements[:seat_num].pop}."
+  puts "#{person} (seat #{party_elements[:seat_num].pop}) will have the #{party_elements[:food].sample} to eat with #{party_elements[:food].sample} on the side. And to drink, #{party_elements[:beverages].sample}! Yum!"
 end
