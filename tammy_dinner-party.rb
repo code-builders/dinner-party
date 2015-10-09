@@ -6,7 +6,12 @@ people = [answer]
 puts "What kind of drink would you like?"
 
 answer = gets.chomp.downcase
-drinks = [answer]
+
+if answer.include?(", ")
+  drinks = answer.split(", ")
+else
+  drinks = [answer]
+end
 
 puts "What kind of dessert would you like?"
 
@@ -15,12 +20,15 @@ desserts = [answer]
 
 seat_number = [1, 3, 5, 7]
 
-while drinks != []
+while desserts != []
   person = {name: people.pop,
-            beverage: drinks.pop,
             food: desserts.pop,
             seat_number: seat_number.pop
   }
 
-  puts "Hi #{person[:name]}! Here is #{person[:beverage]} and #{person[:food]}. Your seat number is #{person[:seat_number]}. ENJOY!"
+  puts "Hi #{person[:name]}! Here is #{person[:food]}. Your seat number is #{person[:seat_number]}. ENJOY!"
+
+  drinks.each do |word|
+    puts "Here is #{word}."
+  end
 end
