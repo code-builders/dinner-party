@@ -15,13 +15,14 @@ puts "Who would you like to invite to the party?"
     invite = gets.chomp
     array.push invite
   end
+  array.pop
   puts array
 
   #number of guests
   #party_elements[:people]=party_elements[:people]-[""]
   sit= party_elements[:people].length
   #seat range
-  party_elements[:seat_num]= 1...sit
+  party_elements[:seat_num]= 1..sit
   party_elements[:seat_num]= party_elements[:seat_num].to_a
   puts party_elements[:seat_num]
 
