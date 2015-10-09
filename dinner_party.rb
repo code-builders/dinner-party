@@ -1,34 +1,32 @@
+Dinner_party = {
 
+  beverage: ["beer", "wine", "water"],
+  food: ["chicken", "steak", "veggie burger"],
+  people: ["Mom", "Dad", "Brother", "Sister"],
+  people2: ["Mom", "Dad", "Brother", "Sister"],
+  seat_num: [1, 2, 3, 4]
 
-beverages = ["beer", "wine", "water"]
-drinks = beverages.shuffle
-food = ["chicken", "steak", "veggie burger"]
-eats = food.shuffle
-people = ["Mom", "Dad", "Brother", "Sister"]
-guests = people.shuffle
-seat_num = [1, 2, 3, 4]
-assignment = seat_num.shuffle
+}
 
-
-puts "The following people are coming to my dinner party: #{guests[0]},
-#{guests[1]}, #{guests[2]}, and #{guests[3]}."
+puts "The following people are coming to my dinner party: #{Dinner_party[:people].shuffle!.pop},
+#{Dinner_party[:people].shuffle!.pop}, #{Dinner_party[:people].shuffle!.pop}, and #{Dinner_party[:people].shuffle!.pop}."
 
 puts ""
 
-puts "#{guests[0]} will be having the #{eats.sample} with #{drinks.sample}
-and will be sitting in seat #{assignment[0]}."
+puts "#{Dinner_party[:people2].shuffle!.pop} will be having the #{Dinner_party[:food].sample} with #{Dinner_party[:beverage].sample}
+and will be sitting in Seat #{Dinner_party[:seat_num].shuffle!.pop}."
 
 puts ""
 
-puts "#{guests[1]} will be having the #{eats.sample} with #{drinks.sample}
-and will be sitting in seat #{assignment[1]}."
+puts "#{Dinner_party[:people2].shuffle!.pop} will be having the #{Dinner_party[:food].sample} with #{Dinner_party[:beverage].sample}
+and will be sitting in Seat #{Dinner_party[:seat_num].shuffle!.pop}."
 
 puts ""
 
-puts "#{guests[2]} will be having the #{eats.sample} with #{drinks.sample}
-and will be sitting in seat #{assignment[2]}."
+puts "#{Dinner_party[:people2].shuffle!.pop} will be having the #{Dinner_party[:food].sample} with #{Dinner_party[:beverage].sample}
+and will be sitting in Seat #{Dinner_party[:seat_num].shuffle!.pop}."
 
 puts ""
 
-puts "#{guests[3]} will be having the #{eats.sample} with #{drinks.sample}
-and will be sitting in seat #{assignment[3]}."
+puts "#{Dinner_party[:people2].shuffle!.pop} will be having the #{Dinner_party[:food].sample} with #{Dinner_party[:beverage].sample}
+and will be sitting in Seat #{Dinner_party[:seat_num].shuffle!.pop}."
