@@ -10,7 +10,7 @@ while drinks != []
   person = {name: people.pop,
             beverage: drinks.pop,
             food: desserts.pop,
-            seat_number: seat_number.pop 
+            seat_number: seat_number.pop
   }
 
   puts person
