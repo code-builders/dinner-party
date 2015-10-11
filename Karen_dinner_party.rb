@@ -18,6 +18,31 @@ puts "Who would you like to invite to the party?"
   array.pop
   puts array
 
+puts "What dishes would you like to serve?"
+  array = party_elements[:food]
+  dishes = gets.chomp
+  party_elements[:food].push(dishes)
+  while
+    dishes != ''
+    dishes = gets.chomp
+    array.push dishes
+  end
+  array.pop
+  puts array
+
+puts "What beverages would you like to serve?"
+  array = party_elements[:beverages]
+  drinks = gets.chomp
+  party_elements[:beverages].push(drinks)
+  while
+    drinks != ''
+    drinks = gets.chomp
+    array.push drinks
+  end
+  array.pop
+  puts array
+
+
   #number of guests
   #party_elements[:people]=party_elements[:people]-[""]
   sit= party_elements[:people].length
