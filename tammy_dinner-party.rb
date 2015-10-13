@@ -1,34 +1,37 @@
-puts "What is your name?"
+data = {
+  names: [],
+  desserts: [],
+  drinks: []
+}
 
+
+puts "Tell me who will be in your party, once done type x"
 answer = gets.chomp.capitalize
-people = [answer]
 
-puts "What kind of drink would you like?"
-
-answer = gets.chomp.downcase
-
-if answer.include?(", ")
-  drinks = answer.split(", ")
-else
-  drinks = [answer]
+while answer != "X"
+  data[:names] << answer
+  answer = gets.chomp.capitalize
 end
 
-puts "What kind of dessert would you like?"
-
+puts "What desserts would you like? once done type x"
 answer = gets.chomp.downcase
-desserts = [answer]
 
-seat_number = [1, 3, 5, 7]
-
-while desserts != []
-  person = {name: people.pop,
-            food: desserts.pop,
-            seat_number: seat_number.pop
-  }
-
-  puts "Hi #{person[:name]}! Here is #{person[:food]}. Your seat number is #{person[:seat_number]}. ENJOY!"
-
-  drinks.each do |word|
-    puts "Here is #{word}."
-  end
+while answer != "x"
+  data[:desserts] << answer
+  answer = gets.chomp.downcase
 end
+
+puts "What drinks would you like? once done type x"
+answer = gets.chomp.downcase
+
+while answer != "x"
+  data[:drinks] << answer
+  answer = gets.chomp.downcase
+end
+
+data[:names].shuffle.each do |name|
+  puts "Hello #{name}, here is your #{data[:desserts].shuffle.first},"
+  puts "and here is your #{data[:drinks].shuffle.first}!"
+end
+
+puts data
