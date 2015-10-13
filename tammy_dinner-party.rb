@@ -1,7 +1,8 @@
 data = {
   names: [],
   desserts: [],
-  drinks: []
+  drinks: [],
+  seat_numbers: []
 }
 
 
@@ -29,9 +30,17 @@ while answer != "x"
   answer = gets.chomp.downcase
 end
 
+counter = 0
+data[:names].each do |name|
+  counter += 1
+  data[:seat_numbers] << counter
+end
+
+random_numbers = data[:seat_numbers].shuffle
+
 data[:names].shuffle.each do |name|
   puts "Hello #{name}, here is your #{data[:desserts].shuffle.first},"
-  puts "and here is your #{data[:drinks].shuffle.first}!"
+  puts "and here is your #{data[:drinks].shuffle.first}! Your seat number is #{random_numbers.pop}."
 end
 
 puts data
