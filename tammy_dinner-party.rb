@@ -29,10 +29,8 @@ while answer != "x"
   answer = gets.chomp.downcase
 end
 
-counter = 0
-data[:names].each do
-  counter += 1
-  data[:seat_numbers] << counter
+data[:names].each_with_index do |x,i|
+  data[:seat_numbers] << i + 1
 end
 
 random_numbers = data[:seat_numbers].shuffle
